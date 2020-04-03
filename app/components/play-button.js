@@ -7,7 +7,7 @@ export default class PlayButtonComponent extends Component {
         const context = new AudioContext()
         const o = context.createOscillator()
         const g = context.createGain()
-        o.type = this.args.frequency.type
+        o.type = this.args.type
         o.connect(g)
         o.frequency.setValueAtTime(this.args.frequency, 0)
         g.connect(context.destination)
