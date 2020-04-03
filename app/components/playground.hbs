@@ -1,0 +1,29 @@
+    <main class="card-playground">
+        <h1 class="title">Playground</h1>
+        <div class="field">
+            <span class="label">frequency:</span>
+            <div class="control control-frequency">
+                <Input class="input is-info is-large" type="number" @value={{this.frequency}} id="frequency" />
+            </div>
+        </div>
+            
+        <div class="field">
+            <span class="label">type:</span>
+            <div class="control">
+                <div class="select is-info is-large">
+                    <select {{on "change" this.changeType}} id="type" aria-label="change type">
+                        <option value="triangle">triangle</option>
+                        <option value="square">square</option>
+                        <option value="sine">sine</option>
+                        <option value="sawtooth">sawtooth</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <button class="button is-danger is-outlined" type="button" {{on "click" this.play}}>
+            <span>Play</span>
+            <span class="icon is-small">
+                <FaIcon @icon="play" />
+            </span>
+        </button>
+    </main>

@@ -1,5 +1,14 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-<WelcomePage />
-{{!-- Feel free to remove this! --}}
-
+<section class="content section container">
+    <h1>Behavioral Tasks Initialization Sounds</h1>
+    <main class="container">
+        <PlayButton @taskName="Provocation" @frequency={{500}} @type="sine" />
+        <PlayButton @taskName="Beads" @frequency={{3000}} @type="sine" />
+        <PlayButton @taskName="Resting State" @frequency={{5000}} @type="triangle" />
+        <PlayButton @taskName="MSIT" @frequency={{50}} @type="sawtooth" />
+        <PlayButton @taskName="Programming" @frequency={{2500}} @type="square" />
+        <PlayButton @taskName="TSST" @frequency={{200}} @type="triangle" />
+        <PlayButton @taskName="Interview" @frequency={{1000}} @type="triangle" />
+         <Playground />
+    </main>
+</section>
 {{outlet}}

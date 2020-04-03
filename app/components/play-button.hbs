@@ -1,0 +1,11 @@
+<main class="card {{this.color}}">
+    <p class="title">{{ @taskName }}</p>
+    <p><span class="is-bold">frequency:</span> {{@frequency}}</p>
+    <p><span class="is-bold">type:</span> {{@type}}</p>
+    <button class="button is-link is-outlined" type="button" {{on "click" this.play}}>
+        <span>Play</span>
+        <span class="icon is-small">
+            <FaIcon @icon="play" />
+        </span>
+    </button>
+</main>
