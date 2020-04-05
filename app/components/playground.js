@@ -5,6 +5,7 @@ import { action } from '@ember/object';
 export default class PlaygroundComponent extends Component {
     @tracked frequency = 200;
     @tracked type = 'triangle';
+    typeOptions = ['triangle', 'square', 'sine', 'sawtooth']
 
     @action
     changeType(context) {
